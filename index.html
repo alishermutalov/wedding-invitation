@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wedding Invitation</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arial">
   <style>
     body {
       font-family: 'Georgia', serif;
@@ -59,6 +61,17 @@
       border: 5px solid #e91e63;
       object-fit: cover;
     }
+    .invitation-date {
+      position: relative;
+      background-color: #fce4ec;
+      padding: 30px;
+      border-radius: 15px;
+      margin-bottom: 40px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     /* Invitation Card Section */
     .invitation-card {
       position: relative;
@@ -71,12 +84,36 @@
       flex-direction: column;
       align-items: center;
     }
-    .invitation-text {
-      font-size: 24px;
+
+    .invitation-date-text {
+      font-family: Arial, sans-serif;
+      font-size: 20px;
       color: #e91e63;
       margin-bottom: 20px;
       position: relative;
       z-index: 1;
+    }
+
+    .invitation-text {
+      font-family: 'Tangerine', serif;
+      font-size: 40px;
+      color: #e91e63;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .invt-name{
+      font-family: Arial, sans-serif;
+      font-size: 30px;
+      color: #e91e63;
+      margin-bottom: 5px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .invt-text-q{
+      font-family: Courier, monospace;
     }
     /* Flower Animation */
     .flower {
@@ -263,6 +300,12 @@
       color: #e91e63;
       margin: 10px 0;
     }
+
+    .location{
+      font-size: 18px;
+      color: #e91e63;
+      margin: left;
+    }
     /* Map Section */
     .map {
       margin-bottom: 40px;
@@ -294,22 +337,22 @@
     <!-- Couple's Name Section -->
     <h1 id="couple">Taklifnoma</h1>
     <div class="couple-name">
-      <p>John & Jane</p>
+      <p>Shaxzod & Surayyo</p>
     </div>
 
     <!-- Couple's Photo Section -->
     <div class="couple-section">
-      <img class="couple-photo" src="./images/couple.jpg" alt="Couple Photo">
+      <img class="couple-photo" src="./images/couple-2.jpg" alt="Couple Photo">
     </div>
 
     <!-- Invitation Card Section -->
     <div class="invitation-card" id="invitation">
       <p class="invitation-text">
-        You are cordially invited to celebrate the wedding of<br>
-        John & Jane<br>
-        on Saturday, 25th November 2023<br>
-        at 4:00 PM
+        Assalomu alaykum hurmatli mehmon <br>
       </p>
+      <p class="invt-name">Surayyoning</p><br>
+      <p class="invt-text">QIZLAR BAZMI munosabati bilan boʻlib oʻtadigan Tantanali kechaning Aziz Mehmoni boʻling! <br></p>
+      <p class="invt-text-q">Alloh ularning qalbini sevgi ila birlashtirdi <b>(Anfol surasi 63-oyat)</b></p>
       <div class="flower">
         <div class="x"></div>
         <div class="x"></div>
@@ -336,13 +379,22 @@
 
     <!-- Contacts Section -->
     <div class="contacts" id="contacts">
-      <p><i class="fas fa-phone"></i> Tel: <a href="tel:+998934354427" style="color: #e91e63;">+998(93) 435 44 27</a></p>
-      <p><i class="fab fa-telegram"></i> Tg: <a href="http://t.me/Alisher_Mutalov" style="color: #e91e63;">@Alisher_Mutalov</a></p>
+      <p><i class="fas fa-phone"></i> Tel: <a href="tel:+998942355223" style="color: #e91e63;">+998(94) 235 52 23</a></p>
+      <!-- <p><i class="fab fa-telegram"></i> Tg: <a href="http://t.me/Alisher_Mutalov" style="color: #e91e63;">@Alisher_Mutalov</a></p> -->
+    </div>
+    <div class="invitation-date" >
+      <div class="invitation-date-text">
+      <p><i class="fas fa-calendar"></i> 21.02.2025</p>
+      <p><i class="fas fa-clock">Soat  18:00</i></p>
+      <p><i class="fas fa-map-marker-alt"></i> Manzil: Xonsaroy toʻyxonasi , 
+        Gurlan tumani</p>
+    </div>
     </div>
 
     <!-- Map Section -->
+
     <div class="map" id="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093747!2d144.9537353153166!3d-37.816279742021665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d6a32f7f1f8!2sSt%20Patrick's%20Cathedral%2C%20Melbourne!5e0!3m2!1sen!2sau!4v1625070000000!5m2!1sen!2sau" allowfullscreen="" loading="lazy"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d58399.01365947495!2d60.386143928835395!3d41.83491059669638!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDEuODM0OSwgNjAuMzg2MQ!5e0!3m2!1sen!2s!4v1684567890123!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
     <!-- Footer Section -->
