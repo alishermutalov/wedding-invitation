@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #333;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    /* Navbar with Icons */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #fce4ec;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .navbar a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #e91e63;
+      font-size: 24px;
+    }
+    .navbar a:hover {
+      opacity: 0.8;
+    }
+    /* Couple's Name Section */
+    h1 {
+      font-size: 48px;
+      color: #e91e63;
+      margin-bottom: 20px;
+    }
+    .couple-name {
+      font-size: 36px;
+      color: #e91e63;
+      margin-bottom: 20px;
+    }
+    /* Couple's Photo Section */
+    .couple-section {
+      margin-bottom: 40px;
+    }
+    .couple-photo {
+      width: 200px;
+      height: 200px;
+      border-radius:100%;
+      border: 5px solid #e91e63;
+      object-fit: cover;
+    }
+    /* Invitation Card Section */
+    .invitation-card {
+      position: relative;
+      background-color: #fce4ec;
+      padding: 30px;
+      border-radius: 15px;
+      margin-bottom: 40px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .invitation-text {
+      font-size: 24px;
+      color: #e91e63;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    /* Flower Animation */
+    .flower {
+      display: grid;
+      font-size: 0.3em;
+      /* height: 50em; */
+      place-items: center;
+      position: relative;
+      z-index: 0;
+      /* margin-top: 20px; */
+    }
+    .x {
+      grid-row: 1/-1;
+      grid-column: 1/-1;
+      border-radius: 12px;
+      animation: ease 2s alternate infinite;
+    }
+    .x:nth-of-type(1) {
+      box-shadow: 0 0 0.5em rgba(255, 255, 255, 0.1);
+      border-radius: 1.2em;
+      width: 4em;
+      height: 4em;
+      background: hsl(330, 100%, 70%);
+      animation-name: x-1;
+      animation-delay: 80ms;
+      transform: rotate(36deg);
+      z-index: 99;
+    }
+    @keyframes x-1 {
+      to {
+        transform: rotate(36deg) scale(0.6);
+      }
+    }
+    .x:nth-of-type(2) {
+      box-shadow: 0 0 1em rgba(255, 255, 255, 0.1);
+      border-radius: 1.4em;
+      width: 8em;
+      height: 8em;
+      background: hsl(330, 100%, 73%);
+      animation-name: x-2;
+      animation-delay: 160ms;
+      transform: rotate(72deg);
+      z-index: 98;
+    }
+    @keyframes x-2 {
+      to {
+        transform: rotate(72deg) scale(0.6);
+      }
+    }
+    .x:nth-of-type(3) {
+      box-shadow: 0 0 1.5em rgba(255, 255, 255, 0.1);
+      border-radius: 1.6em;
+      width: 12em;
+      height: 12em;
+      background: hsl(330, 100%, 76%);
+      animation-name: x-3;
+      animation-delay: 240ms;
+      transform: rotate(108deg);
+      z-index: 97;
+    }
+    @keyframes x-3 {
+      to {
+        transform: rotate(108deg) scale(0.6);
+      }
+    }
+    .x:nth-of-type(4) {
+      box-shadow: 0 0 2em rgba(255, 255, 255, 0.1);
+      border-radius: 1.8em;
+      width: 16em;
+      height: 16em;
+      background: hsl(330, 100%, 79%);
+      animation-name: x-4;
+      animation-delay: 320ms;
+      transform: rotate(144deg);
+      z-index: 96;
+    }
+    @keyframes x-4 {
+      to {
+        transform: rotate(144deg) scale(0.6);
+      }
+    }
+    .x:nth-of-type(5) {
+      box-shadow: 0 0 2.5em rgba(255, 255, 255, 0.1);
+      border-radius: 2em;
+      width: 20em;
+      height: 20em;
+      background: hsl(330, 100%, 82%);
+      animation-name: x-5;
+      animation-delay: 400ms;
+      transform: rotate(180deg);
+      z-index: 95;
+    }
+    @keyframes x-5 {
+      to {
+        transform: rotate(180deg) scale(0.6);
+      }
+    }
+    .x:nth-of-type(6) {
+      box-shadow: 0 0 3em rgba(255, 255, 255, 0.1);
+      border-radius: 2.2em;
+      width: 24em;
+      height: 24em;
+      background: hsl(330, 100%, 85%);
+      animation-name: x-6;
+      animation-delay: 480ms;
+      transform: rotate(216deg);
+      z-index: 94;
+    }
+    @keyframes x-6 {
+      to {
+        transform: rotate(216deg) scale(0.6);
+      }
+    }
+    .x:nth-of-type(7) {
+      box-shadow: 0 0 3.5em rgba(255, 255, 255, 0.1);
+      border-radius: 2.4em;
+      width: 28em;
+      height: 28em;
+      background: hsl(330, 100%, 88%);
+      animation-name: x-7;
+      animation-delay: 560ms;
+      transform: rotate(252deg);
+      z-index: 93;
+    }
+    @keyframes x-7 {
+      to {
+        transform: rotate(252deg) scale(0.6);
+      }
+    }
+    .x:nth-of-type(8) {
+      box-shadow: 0 0 4em rgba(255, 255, 255, 0.1);
+      border-radius: 2.6em;
+      width: 32em;
+      height: 32em;
+      background: hsl(330, 100%, 91%);
+      animation-name: x-8;
+      animation-delay: 640ms;
+      transform: rotate(288deg);
+      z-index: 92;
+    }
+    @keyframes x-8 {
+      to {
+        transform: rotate(288deg) scale(0.6);
+      }
+    }
+    .x:nth-of-type(9) {
+      box-shadow: 0 0 4.5em rgba(255, 255, 255, 0.1);
+      border-radius: 2.8em;
+      width: 36em;
+      height: 36em;
+      background: hsl(330, 100%, 94%);
+      animation-name: x-9;
+      animation-delay: 720ms;
+      transform: rotate(324deg);
+      z-index: 91;
+    }
+    @keyframes x-9 {
+      to {
+        transform: rotate(324deg) scale(0.6);
+      }
+    }
+    .x:nth-of-type(10) {
+      box-shadow: 0 0 5em rgba(255, 255, 255, 0.1);
+      border-radius: 3em;
+      width: 40em;
+      height: 40em;
+      background: hsl(330, 100%, 97%);
+      animation-name: x-10;
+      animation-delay: 800ms;
+      transform: rotate(360deg);
+      z-index: 90;
+    }
+    @keyframes x-10 {
+      to {
+        transform: rotate(360deg) scale(0.6);
+      }
+    }
+    /* Contacts Section */
+    .contacts {
+      margin-bottom: 40px;
+    }
+    .contacts p {
+      font-size: 18px;
+      color: #e91e63;
+      margin: 10px 0;
+    }
+    /* Map Section */
+    .map {
+      margin-bottom: 40px;
+    }
+    .map iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 15px;
+    }
+    /* Footer Section */
+    .footer {
+      font-size: 14px;
+      color: #e91e63;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Navbar with Icons -->
+    <div class="navbar">
+      <a href="#couple"><img src="./images/icons8-rings-48.png" alt="rings"/></a>
+      <a href="#invitation"><img src="./images/icons8-invitation-48.png" alt="Invitation"></a>
+      <a href="#contacts"><img src="./images/icons8-call-48.png" alt="Contacts"></a>
+      <a href="#map"><img src="./images/icons8-location-48.png" alt="Map"></a>
+    </div>
+
+    <!-- Couple's Name Section -->
+    <h1 id="couple">Taklifnoma</h1>
+    <div class="couple-name">
+      <p>John & Jane</p>
+    </div>
+
+    <!-- Couple's Photo Section -->
+    <div class="couple-section">
+      <img class="couple-photo" src="./images/couple.jpg" alt="Couple Photo">
+    </div>
+
+    <!-- Invitation Card Section -->
+    <div class="invitation-card" id="invitation">
+      <p class="invitation-text">
+        You are cordially invited to celebrate the wedding of<br>
+        John & Jane<br>
+        on Saturday, 25th November 2023<br>
+        at 4:00 PM
+      </p>
+      <div class="flower">
+        <div class="x"></div>
+        <div class="x"></div>
+        <div class="x"></div>
+        <div class="x"></div>
+        <div class="x"></div>
+        <div class="x"></div>
+        <div class="x"></div>
+        <div class="x"></div>
+        <div class="x"></div>
+        <div class="x"></div>
+        <div class="x"></div>
+        <div class="x"></div>
+        <div class="x"></div>
+        <div class="x"></div>
+        <div class="x"></div>
+        <div class="x"></div>
+        <div class="x"></div>
+        <div class="x"></div>
+        <div class="x"></div>
+        <div class="x"></div>
+      </div>
+    </div>
+
+    <!-- Contacts Section -->
+    <div class="contacts" id="contacts">
+      <p><i class="fas fa-phone"></i> Tel: <a href="tel:+998934354427" style="color: #e91e63;">+998(93) 435 44 27</a></p>
+      <p><i class="fab fa-telegram"></i> Tg: <a href="http://t.me/Alisher_Mutalov" style="color: #e91e63;">@Alisher_Mutalov</a></p>
+    </div>
+
+    <!-- Map Section -->
+    <div class="map" id="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093747!2d144.9537353153166!3d-37.816279742021665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d6a32f7f1f8!2sSt%20Patrick's%20Cathedral%2C%20Melbourne!5e0!3m2!1sen!2sau!4v1625070000000!5m2!1sen!2sau" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <hr style="color: #e91e63;">
+      <p>Taklifnoma <a href="http://t.me/Mutalov_Alisher" target="_blank" style="color: #e91e63;">@Mutalov_Alisher</a> tomonidan yaratildi. Siz ham shu kabi taklifnoma yaratmoqchi bo'lsangiz bizga murojaat qiling!</p>
+    </div>
+  </div>
+</body>
+</html>
